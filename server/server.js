@@ -36,7 +36,7 @@ app.use(
     saveUninitialized: true,
     secret: "aaabbbccc",
     store: new MongoStore({
-      url: MONGO_URI,
+      mongooseConnection: mongoose.connection,
       autoReconnect: true,
     }),
   })
